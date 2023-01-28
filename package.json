@@ -1,6 +1,6 @@
 {
   "name": "my-app",
-  "homepage": "http://{github-atharva123987}.github.io/{Counter-App}",
+  "homepage": "https://atharva123987.github.io/Counter-App/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
