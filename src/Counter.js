@@ -11,7 +11,13 @@ class Counter extends React.Component{
         };
         
     }
-
+    reset(){
+        this.setState(() =>{
+            return{
+                counter:0,
+            }
+        })
+    }
     increment(){
         // this.state.counter++;
         this.setState((prevState) =>{
@@ -23,7 +29,7 @@ class Counter extends React.Component{
 
     decrement(){
         this.setState((prevState) =>{
-            return{
+            if(prevState.counter>0)return{
                 counter : prevState.counter -1,
             }
         })
@@ -41,6 +47,10 @@ class Counter extends React.Component{
                     console.log("Button clicked2");
                     this.decrement();
             }}>Decrement</button>
+            <button className="reset" onClick={() => {
+                    console.log("Button clicked3");
+                    this.reset();
+            }}>Reset</button>
                 
             </div>
         );
